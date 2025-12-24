@@ -1,8 +1,9 @@
-@font-face {
-    font-family: '';
-    src: url();
+@font-face{
+    font-family: Work Sans;
+    src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
+    font-weight: 400 600 700;
 }
-@font-face {
+@font-face{
     font-family: '';
     src: url();
 }
@@ -11,12 +12,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    ;
 }
 
 :root{
-
+    --White: hsl(0, 100%, 100%);
+    --Purple100: hsl(275, 100%, 97%);
+    --Purple600: hsl(292, 16%, 49%);
+    --Purple950: hsl(292, 42%, 14%);
 }
 
 body{
     font-size: 16px;
+    font-family: "Work Sans";
+    padding: 30px;
 }
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+#main-title{
+    padding-inline: 30px;
+}
+
+main{
+    padding-block: 20px;
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.flex-container2{
+    display: flex;
+    flex-flow: column;
+}
+
+.questions{
+    display: flex;
+    flex-flow: row;
+    padding-block: 20px;
+}
+
+.question-title{
+    padding-right: 30px;
+    color: var(--Purple950);
+}
+
+.questions button{
+    border: none;
+    background-color: transparent;
+}
+
+.answers{
+    padding-bottom: 20px;
+}
+
+.answer{
+    line-height: 1.4em;
+    color: var(--Purple600);
+}
+
+
