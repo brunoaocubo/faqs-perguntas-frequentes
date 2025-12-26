@@ -27,10 +27,11 @@ body{
     min-height: 100dvh;
     font-size: 16px;
     font-family: "Work Sans", sans-serif;
-    background: var(--Purple100) url(../assets/images/background-pattern-mobile.svg) center top no-repeat;
-    background-size: contain;
+    background: var(--Purple100) url(../assets/images/background-pattern-mobile.svg) top no-repeat fixed;
+    background-size: 100% auto;
     padding-block: 30px;
 }
+
 
 #header{
     display: flex;
