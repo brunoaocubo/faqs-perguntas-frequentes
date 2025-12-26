@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <img src="assets/images/icon-star.svg" alt="">
-        <h1 id="main-title">FAQs</h1>
-    </header>
-    <main>
+    <main class="container">
+        <div id="header">
+            <img src="assets/images/icon-star.svg" alt="">
+            <h1 id="main-title">FAQs</h1>
+        </div>
         <section class="flex-container">
             <article class="flex-container2">
                 <div class="questions">
                     <h3 class="question-title">What is Frontend Mentor, and how will it help me?</h3>
-                    <button onclick=""><img src="assets/images/icon-plus.svg" alt=""></button>
+                    <button class="btnAlternar"><img src="assets/images/icon-plus.svg" alt=""></button>
                 </div>
                 <div class="answers">
                     <p class="answer">Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
@@ -27,34 +27,54 @@
             <hr>
             <article class="flex-container2">
                 <div class="questions">
-                    <h3 class="question-title">What is Frontend Mentor, and how will it help me?</h3>
-                    <button onclick=""><img src="assets/images/icon-plus.svg" alt=""></button>
+                    <h3 class="question-title">Is Frontend Mentor free?</h3>
+                    <button class="btnAlternar"><img src="assets/images/icon-plus.svg"></button>
                 </div>
                 <div class="answers">
-                    <p class="answer">Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                    <p class="answer">The majority of our challenges are free, yes. We do have some that are premium and require a Pro subscription to access. It will say on each challenge whether they are free or premium, so it's easy to tell the difference.</p>
                 </div>
             </article>
             <hr>
             <article class="flex-container2">
                 <div class="questions">
-                    <h3 class="question-title">What is Frontend Mentor, and how will it help me?</h3>
-                    <button onclick=""><img src="assets/images/icon-plus.svg" alt=""></button>
+                    <h3 class="question-title">Can i use Frontend Mentor projects is my portfolio?</h3>
+                    <button class="btnAlternar"><img src="assets/images/icon-plus.svg"></button>
                 </div>
                 <div class="answers">
-                    <p class="answer">Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                    <p class="answer">Definitely! Please do feel free to use whatever you build in your portfolio. Helping developers add professional-looking projects to their portfolio was one of the reasons we created this platform!</p>
                 </div>
             </article>
             <hr>
             <article class="flex-container2">
                 <div class="questions">
-                    <h3 class="question-title">What is Frontend Mentor, and how will it help me?</h3>
-                    <button onclick=""><img src="assets/images/icon-plus.svg" alt=""></button>
+                    <h3 class="question-title">How can i get help if i'm stuck on a challenge?</h3>
+                    <button class="btnAlternar"><img src="assets/images/icon-plus.svg" alt=""></button>
                 </div>
                 <div class="answers">
-                    <p class="answer">Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                    <p class="answer">The best (and quickest) way to get help on a challenge is in our Discord server. There are thousands of other developers in there, so it's a great place to ask questions. We even have a dedicated "help" channel! If you haven't joined yet, you can get an invite to our Discord server here.</p>
                 </div>
             </article>
         </section>
     </main>
+    
+    <script>
+        const botoes = document.querySelectorAll('.btnAlternar');
+
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', function() {
+                const paiDoBotao = this.parentElement;
+                const conteudo = paiDoBotao.nextElementSibling;
+                if(conteudo.style.display === 'block'){
+                    conteudo.style.display = 'none';
+                    botao.innerHTML = '<img src="assets/images/icon-plus.svg">';
+                } else{
+                    conteudo.style.display = 'block';
+                    botao.innerHTML = '<img src="assets/images/icon-minus.svg">';
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>

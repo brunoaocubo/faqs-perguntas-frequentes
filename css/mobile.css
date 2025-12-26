@@ -2,10 +2,7 @@
     font-family: Work Sans;
     src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
     font-weight: 400 600 700;
-}
-@font-face{
-    font-family: '';
-    src: url();
+    font-display: swap;
 }
 
 *{
@@ -23,23 +20,38 @@
 }
 
 body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
     font-size: 16px;
-    font-family: "Work Sans";
-    padding: 30px;
+    font-family: "Work Sans", sans-serif;
+    background: var(--Purple100) url(../assets/images/background-pattern-mobile.svg) center top no-repeat;
+    background-size: contain;
+    padding-block: 30px;
 }
 
-header{
+#header{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row nowrap; 
     align-items: center;
+}
+
+#header img{
+    width: 25px;
 }
 
 #main-title{
     padding-inline: 30px;
+    padding-block: 10px;
 }
 
 main{
-    padding-block: 20px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--White);
 }
 
 .flex-container{
@@ -56,6 +68,8 @@ main{
 .questions{
     display: flex;
     flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
     padding-block: 20px;
 }
 
@@ -67,15 +81,17 @@ main{
 .questions button{
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .answers{
     padding-bottom: 20px;
+    display: none;
 }
 
 .answer{
     line-height: 1.4em;
-    color: var(--Purple600);
+    color: var(--Purple600); 
 }
 
 
