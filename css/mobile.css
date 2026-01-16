@@ -79,6 +79,10 @@ main{
     color: var(--Purple950);
 }
 
+.question-title:hover{
+    color: var(--Purple600);
+}
+
 .questions button{
     border: none;
     background-color: transparent;
